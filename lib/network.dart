@@ -4,7 +4,7 @@ import 'classes.dart';
 import "utilities.dart";
 
 // final String baseUrl = "http://localhost:8080/";
-final String baseUrl = "https://mpsinterests.azurewebsites.net/";
+final String baseUrl = "https://mps-reg-interests-backend.herokuapp.com/";
 final String memberDetailsUrlBase =
     'https://members-api.parliament.uk/api/Members/Search?Name=';
 
