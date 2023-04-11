@@ -61,6 +61,11 @@ List<Interest> convertJsonIntoInterestList(Map json) {
   // return members;
 }
 
+
+String getLastElement(List<String> list) {
+  return list[list.length - 1];
+}
+
 List<Member> convertJsonIntoMemberList(Map json) {
   List<Member> members = [];
   print("in conversion");
@@ -70,10 +75,11 @@ List<Member> convertJsonIntoMemberList(Map json) {
     Member newMember = makeMember(memberJson);
     members.add(newMember);
   }
-  members.sort((a, b) => a.memberName
-      .split(" ")
-      .last[0]
-      .compareTo(b.memberName.split(" ").last[0]));
+  members.sort((a, b) {
+      String aLastName = getLastElement(a.memberName.split(' '));
+      String bLastName = getLastElement(b.memberName.split(' '));
+      return aLastName.compareTo(bLastName);
+    });
   return members;
 }
 

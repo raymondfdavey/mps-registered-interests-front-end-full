@@ -32,7 +32,7 @@ dispose() {
           child: child,
         );
       },
-      child: Image.asset("assets/images/gateToParliament.png", scale: 0.6, color: Colors.black,),
+      child: Image.asset("../assets/images/gateToParliament.png", scale: 15.0,),
     );
   }
 }
