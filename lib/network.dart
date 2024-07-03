@@ -31,7 +31,6 @@ Future<List<Member>> fetchMembers() async {
     throw Exception('Failed to load album');
   }
 }
-
 void registerClick(id) async {
   print("REGISTER CLICK");
   final response = await http.patch(baseUrl + "members/member/$id",
